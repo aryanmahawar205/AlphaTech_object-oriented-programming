@@ -2,6 +2,6 @@
 
 int main()
 {
-    printf("Hello World!\n\n");
+    printf("%d", !((4>3) && (3>4)));
     return 0;
 }
