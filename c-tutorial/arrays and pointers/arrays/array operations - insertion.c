@@ -42,10 +42,9 @@ void insertion(int arr[], int size, int position, int value)
     {
         printf("Enter the value you wish to insert - ");
         scanf("%d", &value);
-        for (int i = size-1; i >= position; i--)
+        for (int i = size-1; i >= position-1; i--)
         {
-            arr[i+1] = arr[i];  // I THINK THIS IS WHERE THE PROBLEM IS ARISING IN THE FINAL ITERATION OF THE LOOP, THE ARRAY BECOMES
-                                // BECOMES EMPTY WHICH IS WHY THE VALUE IS GETTING REPEATED
+            arr[i+1] = arr[i];
         }
         arr[position-1] = value;
         size += 1;
@@ -56,7 +55,3 @@ void insertion(int arr[], int size, int position, int value)
         }
     }
 }
-
-// the code is not fully not correct and produces output which is not desired ... I am currently working on this issue ...
-// I have raised a question regarding the same on Stack Overflow -- if you have any solutions or suggestions, you could
-// provide them there -- link to question -> https://stackoverflow.com/questions/77915313/how-can-i-insert-a-given-element-in-an-array-in-c
